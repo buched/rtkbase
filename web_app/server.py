@@ -743,6 +743,8 @@ def update_settings(json_msg):
             restartServices(("main", "ntrip", "local_ntrip_caster", "rtcm_svr", "file", "rtcm_serial"))  
         elif source_section == "ntrip":
             restartServices(("ntrip",))
+        elif source_section == "ntriprepeater":
+            restartServices(("ntriprepeater",))
         elif source_section == "local_ntrip_caster":
             restartServices(("local_ntrip_caster",))
         elif source_section == "rtcm_svr":
