@@ -193,6 +193,13 @@
         </div>
       </div>
       <div class="form-group row">
+        <label for="svr_login_B" class="col-sm-3 col-form-label">Caster login: </label>
+        <div class="col-sm-9">
+            <input id="svr_login_B" type="text" name="svr_login_B" class="form-control" value="{{ ntrip_B_settings[6].svr_login_B }}" title="caster login" required>
+            <div class="invalid-feedback">Caster password</div>
+        </div>
+      </div>
+      <div class="form-group row">
         <label for="svr_pwd_B" class="col-sm-3 col-form-label">Caster password: </label>
         <div class="col-sm-9">
             <input id="svr_pwd_B" type="password" name="svr_pwd_B" class="form-control" value="{{ ntrip_B_settings[2].svr_pwd_B }}" title="caster password" required>
