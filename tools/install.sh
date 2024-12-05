@@ -562,7 +562,7 @@ configure_gnss(){
         python3 "${rtkbase_path}"/tools/unicore_tool.py --port /dev/${com_port} --baudrate ${com_port_settings%%:*} --command send_config_file "${rtkbase_path}"/receiver_cfg/Unicore_UM980 || UM982_rtcm3.cfg --store --retry 2
         if [[ $? -eq  0 ]]
         then
-          echo 'Unicore UM980 || UM982 successfuly configured'
+          echo 'Unicore UM980 UM982 successfuly configured'
           systemctl list-unit-files rtkbase_gnss_web_proxy.service &>/dev/null                                                                                && \
           systemctl enable --now rtkbase_gnss_web_proxy.service                                                                                               && \
           sudo -u "${RTKBASE_USER}" sed -i s/^com_port_settings=.*/com_port_settings=\'115200:8:n:1\'/ "${rtkbase_path}"/settings.conf                        && \
