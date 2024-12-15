@@ -211,7 +211,7 @@ _rtkbase_repo(){
 
 _rtkbase_release(){
     #Get rtkbase latest release
-    sudo -u "${RTKBASE_USER}" wget https://github.com/buched/rtkbase/releases/latest/download/rtkbase.tar.gz -O rtkbase.tar.gz
+    sudo -u "${RTKBASE_USER}" wget https://github.com/stefal/rtkbase/releases/latest/download/rtkbase.tar.gz -O rtkbase.tar.gz
     sudo -u "${RTKBASE_USER}" tar -xvf rtkbase.tar.gz
     _add_rtkbase_path_to_environment
 
